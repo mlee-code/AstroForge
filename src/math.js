@@ -15,3 +15,4 @@ export const summarizeMatches = (matches) => matches.reduce((summary, match) => 
   games: summary.games + 1, score: summary.score + match.score,
   best: Math.max(summary.best, match.score), destroyed: summary.destroyed + match.destroyed
 }), { games: 0, score: 0, best: 0, destroyed: 0 });
+export const deriveStats = (raw) => ({ ...raw, accuracy: raw.shots ? Math.round(raw.hits / raw.shots * 100) : 0, survivalSeconds: Math.floor(raw.elapsed) });

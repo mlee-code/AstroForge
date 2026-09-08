@@ -1,6 +1,6 @@
 # AstroForge
 
-Jogo espacial vetorial, inspirado em Asteroids e construído para demonstrar paradigmas de programação em JavaScript moderno.
+Jogo espacial vetorial, inspirado em Asteroids e construído para demonstrar paradigmas de programação em JavaScript moderno. URL publicada: pendente de autenticação e primeiro push ao GitHub.
 
 ## Executar
 
@@ -21,6 +21,18 @@ Controles: `W`/`↑` acelera, `A`/`D` ou `←`/`→` gira, `Espaço` dispara e `
 
 Detalhes e decisões: [docs/PARADIGMAS.md](docs/PARADIGMAS.md).
 
+## Programming Paradigms Demonstrated
+
+- **Imperativo/estruturado:** loop e regras em `src/game.js`.
+- **Orientação a objetos:** entidades em `src/entities.js`; `Ship` compõe `Weapon`.
+- **Funcional:** funções puras e agregações em `src/math.js`.
+- **Eventos:** `EventBus` e `Events` em `src/events.js`.
+- **Multiple dispatch:** regras entre pares em `src/collision.js`.
+- **Concorrência/assincronicidade:** `src/stats-worker.js` calcula agregados fora da UI.
+- **Declarativo:** dados persistidos e filtros/agregações de coleções.
+
+Documentação adicional: [Projeto](PROJECT.md), [Arquitetura](ARCHITECTURE.md), [Requisitos](REQUIREMENTS.md), [Decisões](DECISIONS.md), [Testes](TESTING.md) e [Roadmap](ROADMAP.md).
+
 ## Publicação no GitHub Pages
 
-No GitHub, abra **Settings → Pages**, selecione **Deploy from a branch**, branch `main` e pasta `/(root)`. Como é um site estático, não há build.
+O workflow `.github/workflows/pages.yml` publica a branch `main`. Em **Settings → Pages**, selecione **GitHub Actions** como fonte. Não há build; os arquivos estáticos são o artefato de produção.
