@@ -4,7 +4,7 @@ Jogo espacial vetorial, inspirado em Asteroids e construído para demonstrar par
 
 ## Executar
 
-Não há dependências. Para servir localmente, execute `npm run serve` e abra `http://localhost:8080`. Para validar a lógica pura, use `npm test`.
+Não há dependências. Para servir localmente, execute `npm run serve` e abra `http://localhost:8080`. Para validar a lógica pura, use `npm test`. Para gerar o pacote estático de produção, use `npm run build`; a saída é `dist/`.
 
 Controles: `W`/`↑` acelera, `A`/`D` ou `←`/`→` gira, `Espaço` dispara e `P` pausa. O menu permite criar perfil, escolher dificuldade e uma nave vetorial determinada por seed. Pausar ou ocultar a página salva a missão no navegador para **Continuar jogo**.
 
