@@ -18,8 +18,20 @@
           <div><small>NÍVEL</small><strong id="level">1</strong></div>
         </div>
         <div id="overlay" class="overlay">
-          <h1>ASTRO<span>FORGE</span></h1><p id="overlay-text">Use WASD ou setas para pilotar. Espaço dispara.</p>
-          <button id="start" type="button">INICIAR MISSÃO</button>
+          <section id="main-menu" class="menu-screen">
+            <h1>ASTRO<span>FORGE</span></h1><p>Uma oficina espacial entre você e o vazio.</p>
+            <button class="menu-action" data-screen="new-game" type="button">NOVO JOGO</button>
+            <button class="menu-action" data-screen="continue-game" type="button">CONTINUAR JOGO</button>
+          </section>
+          <section id="new-game" class="menu-screen hidden">
+            <h2>NOVA MISSÃO</h2><label>Nome <input id="player-name" maxlength="20" placeholder="Piloto" /></label>
+            <label>Dificuldade <select id="difficulty"><option>fácil</option><option selected>normal</option><option>difícil</option></select></label>
+            <label>Nave <select id="ship-variant"><option value="interceptor">Interceptor</option><option value="cargueiro">Cargueiro</option><option value="sentinela">Sentinela</option></select></label>
+            <label>Seed visual <input id="ship-seed" value="astro-01" maxlength="32" /></label>
+            <button id="launch" type="button">DECOLAR</button><button class="back" type="button">VOLTAR</button>
+          </section>
+          <section id="continue-game" class="menu-screen hidden"><h2>CONTINUAR JOGO</h2><label>Nome <input id="continue-name" maxlength="20" placeholder="Piloto" /></label><p id="continue-message"></p><button id="continue" type="button">RECUPERAR MISSÃO</button><button class="back" type="button">VOLTAR</button></section>
+          <section id="game-over" class="menu-screen hidden"><h2>GAME OVER</h2><p id="game-over-stats"></p><button id="again" type="button">NOVA MISSÃO</button><button id="home" type="button">MENU PRINCIPAL</button></section>
         </div>
       </section>
       <section class="panels">
