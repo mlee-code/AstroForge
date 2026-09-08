@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <title>AstroForge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header><a class="brand" href="./">ASTRO<span>FORGE</span></a><p>Sobreviva. Forje seu recorde.</p></header>
+      <section class="game-card" aria-label="Jogo AstroForge">
+        <canvas id="game" width="960" height="600" aria-label="Área do jogo"></canvas>
+        <div class="hud" aria-live="polite">
+          <div><small>PONTOS</small><strong id="score">000000</strong></div>
+          <div><small>VIDAS</small><strong id="lives">3</strong></div>
+          <div><small>NÍVEL</small><strong id="level">1</strong></div>
+        </div>
+        <div id="overlay" class="overlay">
+          <h1>ASTRO<span>FORGE</span></h1><p id="overlay-text">Use WASD ou setas para pilotar. Espaço dispara.</p>
+          <button id="start" type="button">INICIAR MISSÃO</button>
+        </div>
+      </section>
+      <section class="panels">
+        <article><h2>Controles</h2><p><kbd>W</kbd>/<kbd>↑</kbd> impulso · <kbd>A</kbd><kbd>D</kbd> girar · <kbd>Espaço</kbd> disparar · <kbd>P</kbd> pausar</p></article>
+        <article><h2>Telemetria</h2><p id="telemetry">Aguardando decolagem.</p></article>
+      </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
